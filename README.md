@@ -50,8 +50,8 @@ superset fab create-admin
 ```
 exit
 ```
-1.7 Access Superset in Browser
-🔹 Open http://localhost:8088
+1.7 Access Superset in Browser <br>
+🔹 Open http://localhost:8088 <br>
 🔹 Log in with the admin credentials created earlier.
 
 ## 2. Start PostgreSQL
@@ -92,11 +92,11 @@ psql -U postgres
 \l
 ```
 ## 3. Connect Superset to PostgreSQL
-3.1 Open Superset in Browser
+3.1 Open Superset in Browser <br>
 🔹 http://localhost:8088 → Log in
 
-3.2 Add a New Database Connection
-🔹 Click Settings (gear icon) → Database Connections
+3.2 Add a New Database Connection <br>
+🔹 Click Settings (gear icon) → Database Connections <br>
 🔹 Click ➕ Add Database → Select PostgreSQL
 
 3.3 Configure Connection
@@ -104,7 +104,7 @@ psql -U postgres
 ```
 postgresql://postgres:<password>@localhost:5432/<database>
 ```
-(Replace <password> and <database> with actual values.)
+(Replace <password> and <database> with actual values.) <br>
 
 🔹 Click Test Connection → If successful, click Connect.
 
@@ -140,7 +140,7 @@ C:/path/to/ventas.csv → Full path to CSV
 ```
 psql -U your_username -d your_database -c "SELECT * FROM ventas LIMIT 10;"
 ```
-4.6 Update Data in PostgreSQL
+4.6 Update Data in PostgreSQL <br>
 🔹 Only insert new rows when updating.
 
 4.7 Create Temporary Table
@@ -151,39 +151,39 @@ CREATE TABLE temp_table AS SELECT * FROM ventas LIMIT 0;
 ```
 psql -U postgres -d test -c "\copy temp_table(id, local, fecha, efectivo, bbva, rappi, davivienda) FROM 'C:/Users/annav/Documents/DE/Superset/ventas.csv' WITH CSV HEADER NULL '' DELIMITER ',';"
 ```
-4.9 Insert New Rows into Main Table
+4.9 Insert New Rows into Main Table <br>
 🔹 Use INSERT INTO ventas with NOT EXISTS to avoid duplicates.
 
 ## 5. Create Dashboards in Apache Superset
-5.1 Create a Dataset
-🔹 SQL → SQL Lab → Add a new tab
+5.1 Create a Dataset <br>
+🔹 SQL → SQL Lab → Add a new tab <br>
 🔹 Select Database → Schema → Table
 
-5.2 Write and Run SQL Query
-🔹 Enter your SQL query → Click Run
+5.2 Write and Run SQL Query <br>
+🔹 Enter your SQL query → Click Run <br>
 🔹 Review the Results Table
 
-5.3 Save Query as Dataset
-🔹 Click ▼ Save → Save dataset
+5.3 Save Query as Dataset <br>
+🔹 Click ▼ Save → Save dataset <br>
 🔹 Enter a dataset name → Click Save & Explore
 
-5.4 Create a Chart
-🔹 Choose a chart type (bar chart, pie chart, etc.)
+5.4 Create a Chart <br>
+🔹 Choose a chart type (bar chart, pie chart, etc.) <br>
 🔹 Configure settings & apply filters
 
-5.5 Create a Dashboard
-🔹 Open Superset in a new tab
+5.5 Create a Dashboard <br>
+🔹 Open Superset in a new tab <br>
 🔹 Go to Dashboards → + Dashboard → Enter a name → Save
 
-5.6 Save and Add Charts to Dashboard
-🔹 Go back to the chart tab
-🔹 Click Save → Add to Dashboard
+5.6 Save and Add Charts to Dashboard <br>
+🔹 Go back to the chart tab <br>
+🔹 Click Save → Add to Dashboard <br>
 🔹 Select the Dashboard name → Click Save & Go to Dashboard
 
-5.7 Customize the Dashboard
+5.7 Customize the Dashboard <br>
 🔹 Arrange charts, add filters, change layout
 
-5.8 Export Dashboard as PDF
+5.8 Export Dashboard as PDF <br>
 🔹 Open Dashboard → Click ... → Download → Export to PDF
 
 ## 6. Stop Apache Superset Container

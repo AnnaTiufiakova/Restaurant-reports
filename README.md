@@ -115,14 +115,7 @@ psql -U postgres -d your_database
 ```
 (Replace your_database with the actual database name.)
 
-4.2 Create 4 tables (the SQL code for table creation is stored in the 'SQL code' folder):
-ventas
-
-local_93
-
-costo_gasto_93
-
-costo_gasto_uni
+4.2 Create 4 tables (the SQL code for table creation is stored in the 'SQL code' folder): `ventas`, `local_93`, `costo_gasto_93`, `costo_gasto_uni`
 
 4.3 Exit Database
 ```

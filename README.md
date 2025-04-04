@@ -1,3 +1,4 @@
+![Restaurant Business Analytics with Apache Superset](scheme.jpg)
 # Project Purpose
 This project focuses on developing a data visualization solution for a Colombian restaurant business with two locations. The goal is to provide stakeholders with clear and insightful reports through Apache Superset, ensuring data-driven decision-making.
 
